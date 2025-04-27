@@ -1,0 +1,18 @@
+@import 'abstracts/variables';
+
+// 기본 스타일
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+// 기본 컬러 클래스
+.text-primary {
+  color: $green-color;
+}
+
+.bg-primary {
+  background-color: $green-color;
+  color: white;
+} 

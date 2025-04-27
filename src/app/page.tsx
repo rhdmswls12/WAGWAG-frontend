@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import Button from "@/components/common/Button";
+import Button from "@/components/atoms/Button";
 
 export default function Home() {
   return (
