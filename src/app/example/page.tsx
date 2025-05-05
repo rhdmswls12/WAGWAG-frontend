@@ -1,4 +1,5 @@
 import '@/styles/main.scss';
+import EditSvg from "@/assets/images/Edit.svg";
 
 export default function ExamplePage() {
   return (
@@ -47,6 +48,29 @@ export default function ExamplePage() {
       }}>
         기본 버튼
       </button>
+
+
+      <div style={{ margin: '40px 0' }}>
+        <h2>SVG 직접 임포트 사용 예제</h2>
+        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+          {/* 기본 SVG */}
+          <EditSvg />
+          
+          {/* 속성 조정 */}
+          <EditSvg width={32} height={32} />
+          
+          {/* 색상 변경 */}
+          <EditSvg fill="#57F98E" />
+          
+          {/* 여러 속성 조합 */}
+          <EditSvg 
+            width={48} 
+            height={48} 
+            fill="blue"
+            style={{ opacity: 0.7 }}
+          />
+        </div>
+      </div>
     </div>
   );
 } 
