@@ -1,14 +1,11 @@
-import { ButtonProps } from "../Button.types";
 import styles from "./NicknameInputButton.module.scss";
 
-export default function NicknameInputButton({
-  children,
-  onClick,
-  disabled,
-}: ButtonProps) {
+export default function NicknameInputButton() {
   return (
-    <button className={styles.button} onClick={onClick} disabled={disabled}>
-      {children}
-    </button>
+    <input
+      className={styles.input}
+      type="text"
+      placeholder="닉네임을 입력해주세요"
+    />
   );
 }

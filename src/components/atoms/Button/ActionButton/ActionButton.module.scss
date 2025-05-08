@@ -18,6 +18,10 @@
   }
 
   &:disabled {
+    background-color: rgba($white-color, 0.6);
+    color: $gray-600;
+    border: 1px solid $white-color;
     cursor: not-allowed;
+    pointer-events: none;
   }
 }

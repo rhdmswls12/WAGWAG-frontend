@@ -2,22 +2,35 @@
 @use "../../../../styles/abstracts/mixins" as *;
 
 .button {
-  @include font(text-button);
-  background-color: rgba($white-color, 0.6);
-  color: $gray-600;
-  padding: 1.5rem 3.7rem;
-  border: 1px solid $white-color;
-  border-radius: 1.1rem;
+  @include font(text-wag);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $gray-600;
+  color: $gray-200;
+  padding-left: 0.9rem;
+  width: 12rem;
+  height: 4.5rem;
+  border: 1px solid $gray-300;
+  border-radius: 3rem;
   cursor: pointer;
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: rgba($white-color, 0.8);
-    border: 1px solid $white-color;
+    color: $gray-100;
+    border: 1px solid $gray-100;
     transition: 0.5s ease;
   }
-
-  &:disabled {
-    cursor: not-allowed;
-  }
+}
+.icon {
+  position: absolute;
+  left: 2.2rem;
+  width: 1.1rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+}
+.text {
+  display: inline-block;
+  text-align: center;
 }
