@@ -1,11 +1,11 @@
-@import 'variables';
+@use "variables" as *;
 
 @mixin font($style) {
   font-family: $font-family-base;
-  font-size: map-get(map-get($fonts, $style), 'size');
-  font-weight: map-get(map-get($fonts, $style), 'weight');
+  font-size: map-get(map-get($fonts, $style), "size");
+  font-weight: map-get(map-get($fonts, $style), "weight");
 
-  @if map-has-key(map-get($fonts, $style), 'line-height') {
-    line-height: map-get(map-get($fonts, $style), 'line-height');
+  @if map-has-key(map-get($fonts, $style), "line-height") {
+    line-height: map-get(map-get($fonts, $style), "line-height");
   }
 }

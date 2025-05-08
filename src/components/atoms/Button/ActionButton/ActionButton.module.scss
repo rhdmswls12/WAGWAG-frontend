@@ -1,0 +1,27 @@
+@use "../../../../styles/abstracts/variables" as *;
+@use "../../../../styles/abstracts/mixins" as *;
+
+.button {
+  @include font(text-button);
+  background-color: rgba($white-color, 0.6);
+  color: $gray-600;
+  padding: 1.5rem 3.7rem;
+  border: 1px solid $white-color;
+  border-radius: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba($white-color, 0.8);
+    border: 1px solid $white-color;
+    transition: 0.5s ease;
+  }
+
+  &:disabled {
+    background-color: rgba($white-color, 0.6);
+    color: $gray-600;
+    border: 1px solid $white-color;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
