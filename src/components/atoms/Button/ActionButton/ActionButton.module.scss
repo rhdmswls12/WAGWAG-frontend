@@ -1,8 +1,11 @@
+@import "../../../../styles/abstracts/variables";
+@import "../../../../styles/abstracts/mixins";
+
 .button {
-  background-color: #4f46e5; // 보라색 계열 (indigo)
+  background-color: $gray-300;
   color: white;
   padding: 10px 16px;
-  border: none;
+  border: $gray-300;
   border-radius: 8px;
   font-weight: 600;
   font-size: 16px;
@@ -10,7 +13,7 @@
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: #4338ca; // hover 시 좀 더 진한 색
+    border: $gray-300;
   }
 
   &:disabled {
