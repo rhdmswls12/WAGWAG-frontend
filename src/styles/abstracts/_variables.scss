@@ -16,49 +16,49 @@ $font-family-base:
   -apple-system,
   BlinkMacSystemFont,
   sans-serif !default;
-$font-size-base: 62.5%; // 1rem = 10px
+$font-size-base: 62.5% !default; // 1rem = 10px
 
 $fonts: (
   "title-lg": (
-    "size": 3rem,
+    "size": 2.25rem,
     "weight": 500,
   ),
   "title-md": (
-    "size": 2.8rem,
+    "size": 2.1rem,
     "weight": 500,
   ),
   "title-sm": (
-    "size": 2.6rem,
+    "size": 1.95rem,
     "weight": 600,
   ),
   "text-lg": (
-    "size": 2.4rem,
-    "weight": 500,
-  ),
-  "text-md": (
-    "size": 1.9rem,
-    "weight": 500,
-  ),
-  "text-sm": (
     "size": 1.8rem,
     "weight": 500,
   ),
+  "text-md": (
+    "size": 1.42rem,
+    "weight": 500,
+  ),
+  "text-sm": (
+    "size": 1.35rem,
+    "weight": 500,
+  ),
   "text-wag": (
-    "size": 2rem,
+    "size": 1.5rem,
     "weight": 500,
   ),
   "text-button": (
-    "size": 2.2rem,
+    "size": 1.65rem,
     "weight": 500,
   ),
   "text-input": (
-    "size": 2.2rem,
+    "size": 1.65rem,
     "weight": 400,
-    "line-height": 1.4%,
+    "line-height": 1.4,
   ),
   "text-line": (
-    "size": 1.9rem,
+    "size": 1.4rem,
     "weight": 400,
-    "line-height": 1.5%,
+    "line-height": 1.5,
   ),
 ) !default;
