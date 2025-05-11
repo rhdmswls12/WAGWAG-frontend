@@ -1,0 +1,32 @@
+@use "../../../../styles/abstracts/variables" as *;
+@use "../../../../styles/abstracts/mixins" as *;
+
+.button {
+  @include font(text-button);
+  background-color: $gray-600;
+  color: $gray-200;
+  padding: 1.5rem 3.9rem;
+  border: 1px solid $gray-300;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    color: $gray-100;
+    border: 1px solid $gray-100;
+    transition: 0.5s ease;
+  }
+  &:focus {
+    background-color: $gray-600;
+    color: $green-color;
+    border: 1px solid $green-color;
+  }
+
+  &:disabled {
+    background-color: $gray-600;
+    color: $gray-200;
+    border: 1px solid $gray-300;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
