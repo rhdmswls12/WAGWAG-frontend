@@ -6,11 +6,13 @@ interface ModalState {
   title: string;
   confirmText: string;
   cancelText: string;
+  link?: string;
   openModal: (
     type: ModalState["modalType"],
     title: string,
     confirmText?: string,
-    cancelText?: string
+    cancelText?: string,
+    link?: string
   ) => void;
   closeModal: () => void;
 }
@@ -21,8 +23,22 @@ export const useModalStore = create<ModalState>((set) => ({
   title: "",
   confirmText: "예",
   cancelText: "아니오",
-  openModal: (type, title, confirmText = "예", cancelText = "아니오") =>
-    set({ isOpen: true, modalType: type, title, confirmText, cancelText }),
+  link: "",
+  openModal: (
+    type,
+    title,
+    confirmText = "예",
+    cancelText = "아니오",
+    link = ""
+  ) =>
+    set({
+      isOpen: true,
+      modalType: type,
+      title,
+      confirmText,
+      cancelText,
+      link,
+    }),
   closeModal: () =>
     set({
       isOpen: false,

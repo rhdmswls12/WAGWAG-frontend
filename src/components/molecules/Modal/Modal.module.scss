@@ -21,7 +21,9 @@
   flex-direction: column;
   gap: 3.282rem;
   border-color: $gray-300;
-  z-index: 1001;
+}
+.shareModal {
+  width: 56.775rem; // 공유 모달용 너비
 }
 .closeButton {
   @include color($white-color);
@@ -38,4 +40,35 @@
   display: flex;
   justify-content: center;
   gap: 3.432rem;
+}
+.shareBox {
+  position: relative;
+  width: 100%;
+  padding: 0 5.575rem;
+}
+.shareInput {
+  // width: 45.225rem;
+  width: 100%;
+  height: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: transparent;
+  border: 0.075rem solid $gray-300;
+  border-radius: 1.125rem;
+  outline: none;
+  color: $white-color;
+  padding-left: 1.875rem;
+}
+.copyButton {
+  position: absolute;
+  top: 50%;
+  right: 7.45rem;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: $white-color;
+  cursor: pointer;
 }
