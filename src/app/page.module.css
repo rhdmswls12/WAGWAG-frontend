@@ -18,6 +18,7 @@
 
 .page {
   background-color: #080808;
+  height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {

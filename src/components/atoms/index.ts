@@ -5,4 +5,5 @@ export * from "./Button/LoginButton";
 export * from "./Button/NicknameInputButton";
 export * from "./Button/VisibilityToggleButton";
 
-export * from "./ModalButton";
+export * from "./Modal/Button";
+export * from "./Modal/Typography";
