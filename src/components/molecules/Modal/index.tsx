@@ -1,42 +1,34 @@
+"use client";
 import Typography from "@/components/atoms/Modal/Typography";
 import Button from "@/components/atoms/Modal/Button";
 import styles from "./Modal.module.scss";
-import { ModalProps } from "./Modal.types";
+import { useModalStore } from "@/stores";
 
-export default function Modal({
-  type,
-  title,
-  confirmText = "예",
-  cancelText = "아니오",
-  onConfirm,
-  onCancel,
-  onClose,
-  children,
-}: ModalProps) {
+export default function Modal() {
+  const { isOpen, modalType, title, confirmText, cancelText, closeModal } =
+    useModalStore();
+
+  if (!isOpen) return null;
+
   return (
-    <div className={styles.modalOverlay}>
+    <div className={styles.modalOverlay} onClick={closeModal}>
       <div className={styles.modalContent}>
-        <button className={styles.closeButton} onClick={onClose}>
+        <button className={styles.closeButton} onClick={closeModal}>
           X
-        </button>{" "}
-        {/* 아이콘 필요 */}
+        </button>
         <Typography>{title}</Typography>
         <div className={styles.buttonGroup}>
-          {type === "share" && <div className={styles.content}>{children}</div>}
-          <div className={styles.buttonGroup}>
-            {type === "alert" && <Button onClick={onClose}>닫기</Button>}
-
-            {type === "confirm" && (
-              <>
-                <Button onClick={onConfirm} variant="confirm">
-                  {confirmText}
-                </Button>
-                <Button onClick={onCancel} variant="default">
-                  {cancelText}
-                </Button>
-              </>
-            )}
-          </div>
+          {modalType === "alert" && <Button onClick={closeModal}>닫기</Button>}
+          {modalType === "confirm" && (
+            <>
+              <Button onClick={closeModal} variant="confirm">
+                {confirmText}
+              </Button>
+              <Button onClick={closeModal} variant="default">
+                {cancelText}
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </div>

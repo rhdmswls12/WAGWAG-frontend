@@ -21,6 +21,7 @@
   flex-direction: column;
   gap: 3.282rem;
   border-color: $gray-300;
+  z-index: 1001;
 }
 .closeButton {
   @include color($white-color);
