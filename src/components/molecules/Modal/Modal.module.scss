@@ -44,10 +44,9 @@
 .shareBox {
   position: relative;
   width: 100%;
-  padding: 0 5.575rem;
+  padding: 0 5.6rem;
 }
 .shareInput {
-  // width: 45.225rem;
   width: 100%;
   height: 4.2rem;
   display: flex;
@@ -59,9 +58,11 @@
   border-radius: 1.125rem;
   outline: none;
   color: $white-color;
-  padding-left: 1.875rem;
+  padding-left: 2rem;
 }
 .copyButton {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 50%;
   right: 7.45rem;

@@ -17,9 +17,9 @@ export default function Home() {
     //   "https://www.youtube.com/watch?v=abc"
     // );
     // 2. 삭제 여부
-    // openModal("confirm", "와글을 삭제하시겠습니까?");
+    openModal("confirm", "와글을 삭제하시겠습니까?");
     // 3. 경고용 모달
-    openModal("confirm", "와글 업로드 영상 용량이 초과되었습니다.");
+    // openModal("confirm", "와글 업로드 영상 용량이 초과되었습니다.");
   };
   return (
     <div className={styles.page}>

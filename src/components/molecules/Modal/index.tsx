@@ -3,6 +3,8 @@ import Typography from "@/components/atoms/Modal/Typography";
 import Button from "@/components/atoms/Modal/Button";
 import styles from "./Modal.module.scss";
 import { useModalStore } from "@/stores";
+import CancelSvg from "@/assets/images/Cancel.svg";
+import CopySvg from "@/assets/images/Copy.svg";
 
 export default function Modal() {
   const {
@@ -35,9 +37,8 @@ export default function Modal() {
         onClick={(e) => e.stopPropagation()}
       >
         <button className={styles.closeButton} onClick={closeModal}>
-          X
+          <CancelSvg />
         </button>
-        {/* 아이콘 필요 */}
         <Typography>{title}</Typography>
         <div className={styles.buttonGroup}>
           {modalType === "share" && (
@@ -49,9 +50,8 @@ export default function Modal() {
                 readOnly
               />
               <button className={styles.copyButton} onClick={handleCopy}>
-                복사
-              </button>{" "}
-              {/* 아이콘 필요 */}
+                <CopySvg />
+              </button>
             </div>
           )}
           {modalType === "alert" && <Button onClick={closeModal}>닫기</Button>}
