@@ -3,7 +3,7 @@
 
 .button {
   @include font("text-button");
-  @include color($white-color);
+  color: $white-color;
   box-sizing: border-box;
   width: 10.35rem;
   height: 5rem;
@@ -14,7 +14,7 @@
   transition: all 0.2s ease-in-out;
 
   &.confirm:hover {
-    @include color($red-color);
+    color: $red-color;
     border-color: $red-color;
   }
   &.default:hover {

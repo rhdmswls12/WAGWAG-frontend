@@ -9,7 +9,3 @@
     line-height: map-get(map-get($fonts, $style), "line-height");
   }
 }
-
-@mixin color($color) {
-  color: $color;
-}

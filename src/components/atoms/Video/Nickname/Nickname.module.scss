@@ -1,0 +1,12 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.nickname {
+  @include font("text-sm");
+  color: rgba(255, 255, 255, 0.6);
+  // position: absolute;
+  // left: 0;
+  display: flex;
+  // background-color: blue;
+  align-items: center;
+}

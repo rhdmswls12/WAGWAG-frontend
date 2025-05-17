@@ -3,6 +3,6 @@
 
 .title {
   @include font("text-lg");
-  @include color($white-color);
+  color: $white-color;
   padding-top: 7.6rem;
 }

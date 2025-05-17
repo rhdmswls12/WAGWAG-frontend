@@ -1,0 +1,13 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.viewCountGroup {
+  @include font("text-sm");
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  gap: 0.4rem;
+}
+.viewCount {
+  display: flex;
+  align-items: center;
+}

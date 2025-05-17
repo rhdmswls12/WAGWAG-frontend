@@ -26,7 +26,7 @@
   width: 56.775rem; // 공유 모달용 너비
 }
 .closeButton {
-  @include color($white-color);
+  color: $white-color;
   font-size: 2rem;
   position: absolute;
   top: 2.1rem;
