@@ -1,18 +1,16 @@
-import React from "react";
 import styles from "./SearchInput.module.scss";
 import { SearchInputProps } from "../Input.types";
 import SearchSVG from "src/assets/images/Search.svg";
 
-const SearchInput: React.FC<SearchInputProps> = ({
+function SearchInput({
   inputSize,
   shape = "line",
   backgroundColor = "transparent",
   iconPosition = "none",
   placeholderColor = "#888",
-  iconColor = "color",
+  iconColor = "gray",
   ...rest
-}) => {
-  // 돋보기 아이콘 크기 결정
+}: SearchInputProps) {
   const iconSize = inputSize === "small" ? 12 : 18;
 
   return (
@@ -52,6 +50,6 @@ const SearchInput: React.FC<SearchInputProps> = ({
       )}
     </div>
   );
-};
+}
 
 export default SearchInput;
