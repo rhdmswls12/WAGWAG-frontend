@@ -36,7 +36,7 @@ const ArrowButton: React.FC<ArrowButtonProps> = ({
       {...rest}
     >
       <img
-        src="/svg/arrow.svg"
+        src="/Arrow.svg"
         alt={`${direction} arrow`}
         className={styles.arrowIcon + " " + styles[`arrow-${direction}`]}
       />

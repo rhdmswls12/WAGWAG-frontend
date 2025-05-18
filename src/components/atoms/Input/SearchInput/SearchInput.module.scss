@@ -1,0 +1,99 @@
+@use "../../../../styles/abstracts/variables" as *;
+@use "../../../../styles/abstracts/mixins" as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+}
+
+.input::placeholder {
+  color: var(--placeholder-color, $gray-300);
+  opacity: 1;
+}
+
+// 크기
+.small .input {
+  font-size: 15px;
+}
+.large .input {
+  font-size: 18px;
+}
+
+.small {
+  width: 193.5px;
+  height: 35.64px;
+}
+
+.large {
+  width: 270px;
+  height: 49.5px;
+}
+
+// 모양
+.line {
+  border-bottom: 1.13px solid $gray-300;
+  padding-right: 12.91px;
+  border-radius: 0;
+}
+.square {
+  border-radius: 11.25px;
+  padding-left: 18px;
+  padding-right: 15px;
+  border: 1.13px solid $gray-300;
+}
+.round {
+  border-radius: 37.5px;
+  padding-left: 18.75px;
+  padding-right: 11.8px;
+  border: 1.5px solid $gray-600;
+}
+
+// 배경색
+.white {
+  background: #fff;
+}
+.transparent {
+  background: rgba(0, 0, 0, 0);
+}
+.gray {
+  background: rgba($gray-600, 0.3);
+}
+
+// 돋보기 위치
+.left .icon {
+  margin-right: 10px;
+}
+.right .icon {
+  margin-left: 10px;
+}
+
+// 돋보기 크기
+.small .icon {
+  width: 15px;
+  height: 15px;
+}
+.large .icon {
+  width: 18.59px;
+  height: 17.67px;
+}
+
+.icon {
+  background: none;
+}
+.icon.white {
+  color: $white-color;
+}
+.icon.gray {
+  color: $gray-300;
+}
+.icon.black {
+  color: $gray-600;
+}
