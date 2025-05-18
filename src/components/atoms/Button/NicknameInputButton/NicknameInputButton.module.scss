@@ -3,7 +3,7 @@
 
 .input {
   @include font(text-button);
-  background-color: $gray-600;
+  background-color: rgba($gray-600, 0.3);
   color: $white-color;
   padding: 1.5rem 0 1.5rem 1.8rem;
   width: 27rem;
