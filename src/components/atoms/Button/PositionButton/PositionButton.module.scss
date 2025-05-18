@@ -1,0 +1,47 @@
+@use "../../../../styles/abstracts/variables" as *;
+@use "../../../../styles/abstracts/mixins" as *;
+
+.positionButton {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.circle {
+  @include font(text-wag);
+  background: $gray-600;
+  color: $green-color;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.label {
+  background: $white-color;
+  color: $gray-600;
+  font-size: 16.5px;
+  padding: 0 24px 0 40px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-radius: 25.5px;
+  margin-left: -30px;
+  border: 1.5px solid #111;
+  border-left: none;
+  z-index: 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.positionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
