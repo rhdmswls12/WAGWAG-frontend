@@ -21,44 +21,44 @@
 
 // 크기
 .small .input {
-  font-size: 15px;
+  @include font(text-sm);
 }
 .large .input {
-  font-size: 18px;
+  @include font(text-lg);
 }
 
 .small {
-  width: 193.5px;
-  height: 35.64px;
+  width: 19.35rem;
+  height: 3.564rem;
 }
 
 .large {
-  width: 270px;
-  height: 49.5px;
+  width: 27rem;
+  height: 4.95rem;
 }
 
 // 모양
 .line {
-  border-bottom: 1.13px solid $gray-300;
-  padding-right: 12.91px;
+  border-bottom: 0.113rem solid $gray-300;
+  padding-right: 1.291rem;
   border-radius: 0;
 }
 .square {
-  border-radius: 11.25px;
-  padding-left: 18px;
-  padding-right: 15px;
-  border: 1.13px solid $gray-300;
+  border-radius: 1.125rem;
+  padding-left: 1.8rem;
+  padding-right: 1.5rem;
+  border: 0.113rem solid $gray-300;
 }
 .round {
-  border-radius: 37.5px;
-  padding-left: 18.75px;
-  padding-right: 11.8px;
-  border: 1.5px solid $gray-600;
+  border-radius: 3.75rem;
+  padding-left: 1.875rem;
+  padding-right: 1.18rem;
+  border: 0.15rem solid $gray-600;
 }
 
 // 배경색
 .white {
-  background: #fff;
+  background: $white-color;
 }
 .transparent {
   background: rgba(0, 0, 0, 0);
@@ -69,20 +69,20 @@
 
 // 돋보기 위치
 .left .icon {
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 .right .icon {
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 // 돋보기 크기
 .small .icon {
-  width: 15px;
-  height: 15px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .large .icon {
-  width: 18.59px;
-  height: 17.67px;
+  width: 1.859rem;
+  height: 1.767rem;
 }
 
 .icon {

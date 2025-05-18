@@ -72,7 +72,7 @@ const ArrowButtonTest = () => {
       </div>
       {/* TagButton 테스트 */}
       <div style={{ marginTop: 40 }}>
-        <TagButton fontSize="13.5px" padding="9px 22.5px 9.5px">
+        <TagButton fontSize="1.35rem" padding="0.9rem 2.25rem 0.95rem">
           더보기
         </TagButton>
       </div>

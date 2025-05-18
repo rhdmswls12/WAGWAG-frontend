@@ -9,8 +9,8 @@ interface TagButtonProps extends ButtonProps {
 
 function TagButton({
   children,
-  fontSize = "15px",
-  padding = "11.25px 21px",
+  fontSize = "1.5rem",
+  padding = "1.125rem 2.1rem",
   ...rest
 }: TagButtonProps) {
   return (

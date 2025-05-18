@@ -11,11 +11,11 @@
 }
 
 .circle {
-  @include font(text-wag);
+  @include font(title-md);
   background: $gray-600;
   color: $green-color;
-  width: 60px;
-  height: 60px;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,16 +25,16 @@
 }
 
 .label {
+  @include font(text-button);
   background: $white-color;
   color: $gray-600;
-  font-size: 16.5px;
-  padding: 0 24px 0 40px;
-  height: 45px;
+  padding: 0 2.4rem 0 4rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
-  border-radius: 25.5px;
-  margin-left: -30px;
-  border: 1.5px solid #111;
+  border-radius: 2.5rem;
+  margin-left: -3rem;
+  border: 0.15rem solid $gray-600;
   border-left: none;
   z-index: 0;
   position: relative;

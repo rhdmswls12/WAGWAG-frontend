@@ -2,8 +2,8 @@
 @use "../../../../styles/abstracts/mixins" as *;
 
 .arrowButton {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
   background: transparent;
   border: none;
   display: flex;
@@ -11,7 +11,7 @@
   justify-content: center;
   cursor: pointer;
   transition: filter 0.2s;
-  border-radius: 15px;
+  border-radius: 1.5rem;
 }
 
 .arrowButton:disabled {
@@ -24,13 +24,13 @@
 }
 
 .line {
-  border: 1.5px solid $gray-300;
-  padding: 24px;
+  border: 0.15rem solid $gray-300;
+  padding: 2.4rem;
 }
 
 .arrowIcon {
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
   filter: none;
 }
 
