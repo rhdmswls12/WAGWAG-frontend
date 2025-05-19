@@ -6,4 +6,4 @@ export * from "./Button/NicknameInputButton";
 export * from "./Button/VisibilityToggleButton";
 
 export * from "./Modal/Button";
-export * from "./Modal/Typography";
+export * from "./Typography/ModalTypography";

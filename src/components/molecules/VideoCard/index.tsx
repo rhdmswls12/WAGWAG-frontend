@@ -1,10 +1,9 @@
 import Image from "next/image";
 import VideoInfo from "../VideoInfo";
 import styles from "./VideoCard.module.scss";
-import { StaticImageData } from "next/image";
 
 interface VideoCardProps {
-  thumbnailUrl: string | StaticImageData;
+  thumbnailUrl: string;
   nickname: string;
   views: number;
   likes: number;

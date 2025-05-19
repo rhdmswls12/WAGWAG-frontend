@@ -1,9 +1,8 @@
 import Image from "next/image";
 import styles from "./ProfileImage.module.scss";
-import { StaticImageData } from "next/image";
 
 interface ProfileImageProps {
-  imageUrl: string | StaticImageData;
+  imageUrl: string;
   alt: string;
 }
 export default function ProfileImage({ imageUrl, alt }: ProfileImageProps) {

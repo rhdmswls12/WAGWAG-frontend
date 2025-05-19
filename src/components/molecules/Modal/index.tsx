@@ -1,10 +1,10 @@
 "use client";
-import Typography from "@/components/atoms/Modal/Typography";
-import Button from "@/components/atoms/Modal/Button";
 import styles from "./Modal.module.scss";
 import { useModalStore } from "@/stores";
 import CancelSvg from "@/assets/images/Cancel.svg";
 import CopySvg from "@/assets/images/Copy.svg";
+import ModalButton from "@/components/atoms/Button/ModalButton";
+import ModalTypography from "@/components/atoms/Typography/ModalTypography";
 
 export default function Modal() {
   const {
@@ -39,7 +39,7 @@ export default function Modal() {
         <button className={styles.closeButton} onClick={closeModal}>
           <CancelSvg />
         </button>
-        <Typography>{title}</Typography>
+        <ModalTypography>{title}</ModalTypography>
         <div className={styles.buttonGroup}>
           {modalType === "share" && (
             <div className={styles.shareBox}>
@@ -54,15 +54,17 @@ export default function Modal() {
               </button>
             </div>
           )}
-          {modalType === "alert" && <Button onClick={closeModal}>닫기</Button>}
+          {modalType === "alert" && (
+            <ModalButton onClick={closeModal}>닫기</ModalButton>
+          )}
           {modalType === "confirm" && (
             <>
-              <Button onClick={closeModal} variant="confirm">
+              <ModalButton onClick={closeModal} variant="confirm">
                 {confirmText}
-              </Button>
-              <Button onClick={closeModal} variant="default">
+              </ModalButton>
+              <ModalButton onClick={closeModal} variant="default">
                 {cancelText}
-              </Button>
+              </ModalButton>
             </>
           )}
         </div>
