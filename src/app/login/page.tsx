@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import styles from "./Login.module.scss";
-import LoginButton from "@/components/atoms/Button/LoginButton";
+import { LoginButton } from "@/components/atoms";
 import { useState } from "react";
 import { WagleSegmentToggle } from "@/components/atoms/Button/WagleSegmentToggle";
 import { NicknameInputButton } from "@/components/atoms";
