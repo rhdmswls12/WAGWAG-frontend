@@ -3,9 +3,6 @@
 
 .likeCountGroup {
   @include font("text-sm");
-  // background-color: pink;
-  // position: absolute;
-  // right: 0;
   color: rgba(255, 255, 255, 0.6);
   display: flex;
   gap: 0.4rem;

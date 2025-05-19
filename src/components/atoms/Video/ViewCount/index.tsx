@@ -1,13 +1,13 @@
 import styles from "./ViewCount.module.scss";
-import PlaySvg from "@/assets/images/Play.svg";
+import PlayGraySvg from "@/assets/images/PlayGray.svg";
 
-type Props = {
+interface ViewCountProps {
   count: number;
-};
-export default function ViewCount({ count }: Props) {
+}
+export default function ViewCount({ count }: ViewCountProps) {
   return (
     <div className={styles.viewCountGroup}>
-      <PlaySvg />
+      <PlayGraySvg />
       <div className={styles.viewCount}>{count}</div>
     </div>
   );

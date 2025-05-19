@@ -3,13 +3,13 @@ import VideoInfo from "../VideoInfo";
 import styles from "./VideoCard.module.scss";
 import { StaticImageData } from "next/image";
 
-type VideoCardProps = {
+interface VideoCardProps {
   thumbnailUrl: string | StaticImageData;
   nickname: string;
   views: number;
   likes: number;
   title: string;
-};
+}
 export default function VideoCard({
   thumbnailUrl,
   nickname,

@@ -1,9 +1,8 @@
 @use "@/styles/abstracts/variables" as *;
 @use "@/styles/abstracts/mixins" as *;
 
-.nickname {
-  @include font("text-sm");
-  color: rgba(255, 255, 255, 0.6);
+.name {
+  @include font("text-lg");
   display: flex;
   align-items: center;
 }

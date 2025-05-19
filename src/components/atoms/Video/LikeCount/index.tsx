@@ -1,10 +1,10 @@
 import HeartGray from "@/assets/images/HeartGray.svg";
 import styles from "./LikeCount.module.scss";
 
-type Props = {
+interface LikeCountProps {
   count: number;
-};
-export default function LikeCount({ count }: Props) {
+}
+export default function LikeCount({ count }: LikeCountProps) {
   return (
     <div className={styles.likeCountGroup}>
       <HeartGray />

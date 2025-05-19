@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { useModalStore } from "@/stores";
 import VideoCard from "@/components/molecules/VideoCard";
+import ProfileMenuButton from "@/components/molecules/Menu/ProfileMenuButton";
 
 export default function Home() {
   const { openModal } = useModalStore();
@@ -33,6 +34,7 @@ export default function Home() {
         likes={1000}
         title="대현문화공원 앞에 버스킹 실력자"
       />
+      <ProfileMenuButton imageUrl="/nature.jpg" name="waggle" href="/mypage" />
     </div>
   );
 }
