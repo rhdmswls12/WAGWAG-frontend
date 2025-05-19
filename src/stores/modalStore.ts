@@ -7,13 +7,13 @@ interface ModalState {
   confirmText: string;
   cancelText: string;
   link?: string;
-  openModal: (
-    type: ModalState["modalType"],
-    title: string,
-    confirmText?: string,
-    cancelText?: string,
-    link?: string
-  ) => void;
+  openModal: (options: {
+    type: ModalState["modalType"];
+    title: string;
+    confirmText?: string;
+    cancelText?: string;
+    link?: string;
+  }) => void;
   closeModal: () => void;
 }
 
@@ -24,13 +24,13 @@ export const useModalStore = create<ModalState>((set) => ({
   confirmText: "예",
   cancelText: "아니오",
   link: "",
-  openModal: (
+  openModal: ({
     type,
     title,
     confirmText = "예",
     cancelText = "아니오",
-    link = ""
-  ) =>
+    link = "",
+  }) =>
     set({
       isOpen: true,
       modalType: type,
@@ -46,5 +46,6 @@ export const useModalStore = create<ModalState>((set) => ({
       title: "",
       confirmText: "예",
       cancelText: "아니오",
+      link: "",
     }),
 }));

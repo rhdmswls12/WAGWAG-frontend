@@ -1,4 +1,5 @@
 "use client";
+
 import styles from "./Modal.module.scss";
 import { useModalStore } from "@/stores";
 import CancelSvg from "@/assets/images/Cancel.svg";
@@ -24,6 +25,7 @@ export const Modal = () => {
     try {
       await navigator.clipboard.writeText(link);
       alert("링크가 복사되었습니다!");
+      closeModal();
     } catch {
       alert("복사에 실패했습니다.");
     }
@@ -32,7 +34,9 @@ export const Modal = () => {
   return (
     <div className={styles.modalOverlay} onClick={closeModal}>
       <div
-        className={`${styles.modalContent} ${modalType === "share" ? styles.shareModal : ""}`}
+        className={`${styles.modalContent} ${
+          modalType === "share" ? styles.shareModal : ""
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         <button className={styles.closeButton} onClick={closeModal}>
