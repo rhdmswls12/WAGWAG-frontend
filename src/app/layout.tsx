@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import Modal from "@/components/molecules/Modal";
+import { Modal } from "@/components/molecules";
 
 const pretendard = localFont({
   src: "../assets/fonts/PretendardVariable.woff2",
