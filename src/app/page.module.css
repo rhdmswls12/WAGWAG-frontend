@@ -17,8 +17,7 @@
 } */
 
 .page {
-  background-color: #080808;
-  height: 100vh;
+  /* background-color: #080808; */
 }
 
 @media (prefers-color-scheme: dark) {

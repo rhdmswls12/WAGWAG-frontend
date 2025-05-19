@@ -3,7 +3,7 @@
 
 .button {
   @include font(text-md);
-  background-color: $gray-600;
+  background-color: rgba($gray-600, 0.3);
   color: $white-color;
   padding: 1.5rem 3.9rem;
   border: 1px solid $gray-300;
@@ -15,7 +15,7 @@
     border: 1px solid $white-color;
     transition: 0.5s ease;
   }
-  &:focus {
+  &.selected {
     background-color: $gray-100;
     color: $gray-600;
     border: 1px solid $white-color;
