@@ -3,7 +3,8 @@ import { useRouter } from "next/navigation";
 import styles from "./Login.module.scss";
 import LoginButton from "@/components/atoms/Button/LoginButton";
 import { useState } from "react";
-import WagleSegmentToggle from "@/components/atoms/Button/WagleSegmentToggle";
+import { WagleSegmentToggle } from "@/components/atoms/Button/WagleSegmentToggle";
+import { NicknameInputButton } from "@/components/atoms";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -13,6 +14,7 @@ export default function LoginPage() {
     <>
       <div className={styles.container}>
         <WagleSegmentToggle mode={mode} onChange={setMode} />{" "}
+        <NicknameInputButton />
         <LoginButton onClick={() => router.push("./onboarding/nickname")}>
           구글로 시작하기 테스트
         </LoginButton>
