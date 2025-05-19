@@ -7,14 +7,14 @@ interface ModalButtonProps extends ButtonProps {
   variant?: ButtonVariant;
 }
 
-export default function ModalButton({
+export const ModalButton = ({
   children,
   variant = "default",
   ...rest
-}: ModalButtonProps) {
+}: ModalButtonProps) => {
   return (
     <button className={`${styles.button} ${styles[variant]}`} {...rest}>
       {children}
     </button>
   );
-}
+};

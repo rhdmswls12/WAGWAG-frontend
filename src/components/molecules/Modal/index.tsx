@@ -3,10 +3,9 @@ import styles from "./Modal.module.scss";
 import { useModalStore } from "@/stores";
 import CancelSvg from "@/assets/images/Cancel.svg";
 import CopySvg from "@/assets/images/Copy.svg";
-import ModalButton from "@/components/atoms/Button/ModalButton";
-import ModalTypography from "@/components/atoms/Typography/ModalTypography";
+import { ModalButton, ModalTypography } from "@/components/atoms";
 
-export default function Modal() {
+export const Modal = () => {
   const {
     isOpen,
     modalType,
@@ -71,4 +70,4 @@ export default function Modal() {
       </div>
     </div>
   );
-}
+};

@@ -4,6 +4,10 @@ export * from "./Button/CategorySelectButton";
 export * from "./Button/LoginButton";
 export * from "./Button/NicknameInputButton";
 export * from "./Button/VisibilityToggleButton";
-
-export * from "./Modal/Button";
+export * from "./Button/ModalButton/index";
 export * from "./Typography/ModalTypography";
+export * from "./Profile/ProfileNickname";
+export * from "./Profile/ProfileImage";
+export * from "./Video/LikeCount";
+export * from "./Video/Nickname";
+export * from "./Video/ViewCount";

@@ -5,10 +5,10 @@ interface ProfileImageProps {
   imageUrl: string;
   alt: string;
 }
-export default function ProfileImage({ imageUrl, alt }: ProfileImageProps) {
+export const ProfileImage = ({ imageUrl, alt }: ProfileImageProps) => {
   return (
     <div className={styles.imageWrapper}>
       <Image src={imageUrl} alt={alt} fill className={styles.image} />
     </div>
   );
-}
+};

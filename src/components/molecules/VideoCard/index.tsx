@@ -1,6 +1,6 @@
 import Image from "next/image";
-import VideoInfo from "../VideoInfo";
 import styles from "./VideoCard.module.scss";
+import { VideoInfo } from "@/components/molecules";
 
 interface VideoCardProps {
   thumbnailUrl: string;
@@ -9,13 +9,13 @@ interface VideoCardProps {
   likes: number;
   title: string;
 }
-export default function VideoCard({
+export const VideoCard = ({
   thumbnailUrl,
   nickname,
   views,
   likes,
   title,
-}: VideoCardProps) {
+}: VideoCardProps) => {
   return (
     <div className={styles.videoCardContainer}>
       <div className={styles.thumbnailContainer}>
@@ -25,4 +25,4 @@ export default function VideoCard({
       <p className={styles.videoTitle}>{title}</p>
     </div>
   );
-}
+};

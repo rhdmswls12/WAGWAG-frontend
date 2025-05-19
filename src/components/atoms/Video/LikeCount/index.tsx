@@ -4,11 +4,11 @@ import styles from "./LikeCount.module.scss";
 interface LikeCountProps {
   count: number;
 }
-export default function LikeCount({ count }: LikeCountProps) {
+export const LikeCount = ({ count }: LikeCountProps) => {
   return (
     <div className={styles.likeCountGroup}>
       <HeartGray />
       <div className={styles.likeCount}>{count}</div>
     </div>
   );
-}
+};

@@ -3,8 +3,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import { useModalStore } from "@/stores";
-import VideoCard from "@/components/molecules/VideoCard";
-import ProfileMenuButton from "@/components/molecules/Menu/ProfileMenuButton";
+import { ProfileMenuButton, VideoCard } from "@/components/molecules";
 
 export default function Home() {
   const { openModal } = useModalStore();

@@ -1,8 +1,7 @@
-import ProfileImage from "@/components/atoms/Profile/ProfileImage";
 import styles from "./ProfileMenuButton.module.scss";
-import Nickname from "@/components/atoms/Profile/Nickname";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { ProfileImage, ProfileNickname } from "@/components/atoms";
 
 interface ProfileMenuButtonProps {
   imageUrl: string;
@@ -10,11 +9,11 @@ interface ProfileMenuButtonProps {
   href: string;
 }
 
-export default function ProfileMenuButton({
+export const ProfileMenuButton = ({
   imageUrl,
   name,
   href,
-}: ProfileMenuButtonProps) {
+}: ProfileMenuButtonProps) => {
   const pathname = usePathname();
   const isActive = pathname === href;
   return (
@@ -23,7 +22,7 @@ export default function ProfileMenuButton({
       className={`${styles.profile} ${isActive ? styles.active : ""}`}
     >
       <ProfileImage imageUrl={imageUrl} alt={name} />
-      <Nickname name={name} />
+      <ProfileNickname name={name} />
     </Link>
   );
-}
+};
