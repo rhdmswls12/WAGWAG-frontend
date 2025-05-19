@@ -1,0 +1,17 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.videoCardContainer {
+  position: relative;
+  width: 23.6rem;
+  cursor: pointer;
+}
+.thumbnailContainer {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.videoTitle {
+  @include font("text-wag");
+  padding-top: 0.9rem;
+}

@@ -1,0 +1,23 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.button {
+  @include font("text-button");
+  color: $white-color;
+  box-sizing: border-box;
+  width: 10.35rem;
+  height: 5rem;
+  border-radius: 1.125rem;
+  background-color: transparent;
+  border: 0.075rem solid $gray-300;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &.confirm:hover {
+    color: $red-color;
+    border-color: $red-color;
+  }
+  &.default:hover {
+    border-color: $gray-hover;
+  }
+}

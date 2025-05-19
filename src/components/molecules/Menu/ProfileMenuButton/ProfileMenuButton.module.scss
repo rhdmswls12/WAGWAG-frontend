@@ -1,0 +1,21 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.profile {
+  width: fit-content;
+  height: 8.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  color: $gray-100;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $green-color;
+  }
+
+  &.active {
+    color: $green-color;
+  }
+}

@@ -1,0 +1,8 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.title {
+  @include font("text-lg");
+  color: $white-color;
+  padding-top: 7.6rem;
+}

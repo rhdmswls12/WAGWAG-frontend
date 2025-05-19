@@ -1,0 +1,12 @@
+.imageWrapper {
+  position: relative;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 50%;
+}

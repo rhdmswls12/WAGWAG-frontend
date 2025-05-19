@@ -1,0 +1,8 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.name {
+  @include font("text-lg");
+  display: flex;
+  align-items: center;
+}
