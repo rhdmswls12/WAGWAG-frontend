@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./page.module.css";
+// import styles from "./page.module.css";
 import { useModalStore } from "@/stores";
 import { ProfileMenuButton, VideoCard } from "@/components/molecules";
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
     });
   };
   return (
-    <div className={styles.page}>
+    <div>
       <div
         style={{
           display: "flex",

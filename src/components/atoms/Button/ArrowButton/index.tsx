@@ -7,19 +7,19 @@ interface ArrowButtonProps extends ButtonProps {
   direction: "left" | "right" | "up" | "down";
 }
 
-const getArrowRotation = (direction: string) => {
-  switch (direction) {
-    case "up":
-      return "rotate(-90deg)";
-    case "down":
-      return "rotate(90deg)";
-    case "left":
-      return "rotate(180deg)";
-    case "right":
-    default:
-      return "none";
-  }
-};
+// const getArrowRotation = (direction: string) => {
+//   switch (direction) {
+//     case "up":
+//       return "rotate(-90deg)";
+//     case "down":
+//       return "rotate(90deg)";
+//     case "left":
+//       return "rotate(180deg)";
+//     case "right":
+//     default:
+//       return "none";
+//   }
+// };
 
 const ArrowButton: React.FC<ArrowButtonProps> = ({
   arrowType = "default",

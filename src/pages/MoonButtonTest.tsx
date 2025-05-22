@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowButton from "../components/atoms/Button/ArrowButton";
+// import ArrowButton from "../components/atoms/Button/ArrowButton";
 import SearchInput from "../components/atoms/Input/SearchInput";
 import PositionButton from "../components/atoms/Button/PositionButton";
 import TagButton from "../components/atoms/Button/TagButton";
@@ -17,7 +17,7 @@ const ArrowButtonTest = () => {
         gap: 40,
       }}
     >
-      <ArrowButton direction="down" arrowType="line" children={null} />
+      {/* <ArrowButton direction="down" arrowType="line" children={null} /> */}
       {/* SearchInput 테스트 */}
       <div
         style={{
