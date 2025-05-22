@@ -14,7 +14,7 @@ export default function LoginPage() {
       <div className={styles.container}>
         <WagleSegmentToggle mode={mode} onChange={setMode} />{" "}
         <LoginButton onClick={() => router.push("./onboarding/nickname")}>
-          구글로 시작하기
+          구글로 시작하기 테스트
         </LoginButton>
       </div>
     </>
