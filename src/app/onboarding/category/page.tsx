@@ -2,8 +2,8 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./Category.module.scss";
-import ActionButton from "@/components/atoms/Button/ActionButton";
-import CategorySelectButton from "@/components/atoms/Button/CategorySelectButton";
+import { ActionButton } from "@/components/atoms/Button/ActionButton";
+import { CategorySelectButton } from "@/components/atoms/Button/CategorySelectButton";
 
 export default function CategoryPage() {
   const [selected, setSelected] = useState(false);
