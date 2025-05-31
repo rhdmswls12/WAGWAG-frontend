@@ -8,7 +8,7 @@ import OnboardingStepIndicator from "@/components/atoms/OnboardingStep/StepIndic
 
 export default function LocationPage() {
   const [selectedGu, setSelectedGu] = useState<string | null>("강남구");
-  const [selectedDong, setSelectedDong] = useState<string | null>(null);
+  const [selectedDong, setSelectedDong] = useState<string | null>("개포1동");
   const dongList = selectedGu ? SEOUL_REGIONS[selectedGu] : [];
   const guList = Object.keys(SEOUL_REGIONS);
   const router = useRouter();
@@ -19,7 +19,8 @@ export default function LocationPage() {
       <div className={styles.container}>
         <h1 className={styles.guideText}>waggle님의 지역을 설정해 주세요</h1>
         <h2 className={styles.helperText}>
-          * 내 지역을 기반으로 와글을 볼 수 있어요
+          <span className={styles.highlight}>* 내 지역</span>을 기반으로 와글을
+          볼 수 있어요
         </h2>
 
         <div className={styles.columns01}>
@@ -33,7 +34,7 @@ export default function LocationPage() {
             <div className={styles.line}></div>
 
             {/* 구 · 군 · 시 */}
-            <div className={styles.guList} style={{ width: "45rem" }}>
+            <div className={styles.guList}>
               <h3 className={styles.sectiontitle}>구 · 군 · 시</h3>
               {guList.map((gu) => (
                 <button
@@ -50,15 +51,22 @@ export default function LocationPage() {
             </div>
 
             {/* 동 · 읍 · 면 */}
-            <div className={styles.guList} style={{ width: "46.4rem" }}>
+            <div className={styles.dongList}>
               <h3 className={styles.sectiontitle}>동 · 읍 · 면</h3>
               {dongList.map((dong) => (
                 <button
                   key={dong}
-                  className={`${styles.guButton} ${selectedDong === dong ? styles.active : ""}`}
+                  className={`${styles.dongButton} ${selectedDong === dong ? styles.active : ""}`}
                   onClick={() => setSelectedDong(dong)}
                 >
                   {dong}
+                  {selectedDong === dong && (
+                    <img
+                      src="/checkIcon.svg"
+                      alt="선택완료"
+                      className={styles.checkIcon}
+                    />
+                  )}
                 </button>
               ))}
             </div>
@@ -68,7 +76,7 @@ export default function LocationPage() {
         <ActionButton
           className={styles.actionButton}
           onClick={() => router.push("./category")}
-          disabled={!selectedGu || !selectedDong}
+          disabled={!selectedGu || !selectedDong} // ✅ 둘 다 선택되지 않으면 비활성화
         >
           확인
         </ActionButton>

@@ -29,6 +29,9 @@
   @include font(text-md);
   color: $gray-200;
   margin-bottom: 6rem;
+  .highlight {
+    color: $green-color;
+  }
 }
 
 .actionButton {
@@ -53,9 +56,7 @@
 
 .wrapper {
   display: flex;
-  gap: 2rem;
-  max-width: 90rem;
-  margin: 0 auto;
+  gap: 4rem;
   justify-content: center;
 }
 
@@ -73,20 +74,47 @@
 }
 
 .line {
-  background-color: $gray-300;
-  width: 1px;
+  background-color: $gray-400;
+  width: 1.5px;
   height: auto;
-  margin: 0 1.5rem;
 }
 
 .guList {
+  width: 40.9rem;
+  padding-right: 4rem;
   overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  max-height: 27.7rem;
+  gap: 1.5rem;
+  max-height: 28.4rem;
   overflow-y: auto;
-  padding-right: 4.1rem;
+
+  &::-webkit-scrollbar {
+    width: 0.45rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-200;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $gray-400;
+  }
+}
+.dongList {
+  padding-right: 1rem;
+  align-content: start;
+  width: 45rem;
+  grid-template-rows: auto;
+  grid-auto-rows: 4.65rem;
+  max-height: calc((4.65rem * 3) + (1.5rem * 3));
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1.5rem;
+  max-height: 28.4rem;
+  overflow-y: auto;
 
   &::-webkit-scrollbar {
     width: 0.45rem;
@@ -104,15 +132,13 @@
 
 .guButton {
   @include font(text-button);
-  color: $gray-200;
-  white-space: nowrap;
-  padding: 1.3rem 2.2rem;
+  color: $gray-100;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 3rem;
   cursor: pointer;
-  transition: background-color 0.2s;
-
+  padding: 1.3rem 2.4rem;
+  justify-self: center;
   &:hover {
     color: $gray-100;
   }
@@ -127,16 +153,44 @@
     color: $green-color;
   }
 }
+.dongButton {
+  all: unset;
+  padding: 1.3rem 2rem;
+  @include font(text-button);
+  color: $gray-100;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  &:hover {
+    color: $gray-100;
+  }
 
+  &.active {
+    color: $green-color;
+  }
+
+  &.active:hover {
+    color: $green-color;
+  }
+}
 .sectiontitle {
   font-size: 1.65rem;
   font-weight: 700;
   color: $gray-200;
   text-align: left;
-  padding-left: 0.2rem;
   grid-column: 1 / -1;
   position: sticky;
   top: 0;
   background-color: transparent;
-  padding-bottom: 1.6rem;
+  padding-bottom: 1.4rem;
+  background: linear-gradient(
+    to bottom,
+    rgba($gray-600, 1) 0%,
+    rgba($gray-600, 0.9) 40%,
+    rgba($gray-600, 0.8) 60%,
+    rgba($gray-600, 0.5) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
